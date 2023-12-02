@@ -1,7 +1,5 @@
 package hello.springmvc.basic.request;
 
-import hello.springmvc.basic.HelloData;
-
 import jakarta.servlet.ServletInputStream;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -9,6 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.http.HttpEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +17,7 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 
 @Slf4j
-@RestController
+@Controller
 public class RequestBodyStringController {
 
     @PostMapping("/request-body-string-v1")

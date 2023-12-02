@@ -10,15 +10,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.http.HttpEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -26,7 +24,7 @@ import java.nio.charset.StandardCharsets;
  * content-type: application/json
  */
 @Slf4j
-@RestController
+@Controller
 public class RequestBodyJsonController {
 
     private ObjectMapper objectMapper = new ObjectMapper();
